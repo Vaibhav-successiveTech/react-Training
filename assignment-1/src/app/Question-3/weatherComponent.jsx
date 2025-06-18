@@ -7,6 +7,10 @@ export default function Weather(props){
         return (
             <h1>It's Cold Today</h1>
         )
+    }else if(props.temperature == undefined){
+        return (
+            <h1></h1>
+        )
     }else{
         return (
             <h1>It's Good Day Today</h1>

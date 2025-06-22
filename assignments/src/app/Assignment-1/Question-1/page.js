@@ -1,4 +1,4 @@
-import MyComponent from "../../../components/component";
+import MyComponent from "../../../Assignment1Components/component";
 export default function Home(){
     return (
         <MyComponent/>

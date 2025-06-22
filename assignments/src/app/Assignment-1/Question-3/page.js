@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Weather from "../../../components/weatherComponent";
+import Weather from "../../../Assignment1Components/weatherComponent";
 
 export default function Home(){
     let [temp,setTemp] = useState();

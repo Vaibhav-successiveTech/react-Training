@@ -4,24 +4,24 @@ import { useEffect, useState } from "react";
 
 const SlideShow = () => {
     let arr = ['/pic1.jpeg','/pic2.jpeg','/pic3.jpeg','/pic4.jpeg','/pic5.jpeg','/pic6.jpeg','/pic7.jpeg'];
-    let [index,setIndex] = useState(1);
-    let [image,setImage] = useState(arr[0]);
+    let [index,setIndex] = useState(0);
     let [paused,setPaused] = useState(false);
-
+    let interval = null;
     useEffect(()=>{
-            if(!paused){
-                setInterval(()=>{
-                    setImage(()=>arr[index%arr.length]);
-                    setIndex(index+1); 
-                },2000);
-                    
-            }
-    },[image,paused]);
+        if(!paused){
+            interval = setInterval(()=>{
+                setIndex((index)=>{
+                    return (index+1)%arr.length;
+                });
+            },2000);
+        }
+        return ()=> clearInterval(interval);
+    },[paused]);
 
 
     return (
         <>
-        <img src={image}/><br/>
+        <img src={arr[index]}/><br/>
         <button onClick={()=>{
             setPaused(false);
         }}> Play </button>  <button onClick={()=>{

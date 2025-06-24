@@ -22,6 +22,9 @@ export default function DashBoard(){
         <button onClick={()=>{router.push('/Assignment-2/Question14');}}>Question14</button>
         <button onClick={()=>{router.push('/Assignment-2/Question15');}}>Question15</button>
         <button onClick={()=>{router.push('/Assignment-2/Question16');}}>Question16</button>
+        <button onClick={()=>{router.push('/Assignment-2/Question17');}}>Question17</button>
+        <button onClick={()=>{router.push('/Assignment-2/Question18');}}>Question18</button>
+        <button onClick={()=>{router.push('/Assignment-2/Question19');}}>Question19</button>
         {/* <button onClick={()=>{router.push('/Assignment-2/Question-2');}}>Question-2</button>
         <button onClick={()=>{router.push('/Assignment-2/Question-3');}}>Question-3</button>
         <button onClick={()=>{router.push('/Assignment-2/Question-4');}}>Question-4</button>

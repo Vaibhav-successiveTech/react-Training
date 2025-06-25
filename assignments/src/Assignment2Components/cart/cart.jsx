@@ -2,29 +2,31 @@
 import { useEffect, useState ,useContext} from "react";
 
 import { CartContext } from "./app";
+import CartItems from "./cartItems";
 
 export default function Cart(){
     
     let [total,setTotal] = useState(0);
-    let {list,setList} = useContext(CartContext);
-    let [newList , setNewList] = useState([]);
+    let {cartList,setCartList} = useContext(CartContext);
 
     useEffect(()=>{
         let temp = 0;
-        for(let i of list){
-            temp+=i[1];
-            setNewList([...newList,i[0]]);
+        for(let i of cartList){
+            temp+=i.price;
         }
         setTotal(temp);
-    },[list])
+    },[cartList]);
 
 
     return (
-        <div>
-        <p>
-            Items in the Cart are {newList}
-        </p>
+        <>
+            <br/>
+            <br/>
+            <h3> Cart Items are : </h3>
+            {cartList.map((i)=>{
+                return <CartItems obj={i}/>
+            })}
         <h4> Total : {total} </h4>
-        </div>
+        </>
     );
 }

@@ -1,16 +1,21 @@
 'use client'
 import { useContext } from "react";
 import { CartContext } from "./app";
-export default function Product({id,price}){
+export default function Product({obj}){
 
-    let {list,setList} = useContext(CartContext);
+    let {cartList,setCartList} = useContext(CartContext);
 
     return (
-            <div> Product : {id} 
-                Cost : {price}
-                <button id = {price} onClick={(e)=>{
-                    setList([...list,[e.target.parentElement,e.target.id]])
+            <p>
+
+                Product : {obj.id}  Cost : {obj.price}
+                <br/>
+                <button onClick={()=>{
+                    setCartList([...cartList,obj])
                 }}> Add To Cart </button>
-            </div>
+
+
+
+            </p>
     );
 }

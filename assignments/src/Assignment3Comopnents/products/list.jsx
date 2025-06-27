@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import { ProductList } from "./product";
 export default function ListComponent(){

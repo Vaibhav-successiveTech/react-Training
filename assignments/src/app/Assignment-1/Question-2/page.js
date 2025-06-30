@@ -1,4 +1,4 @@
-import UserCard from "../../../components/usercard";
+import UserCard from "../../../Assignment1Components/usercard";
 export default function Home(){
     return (
         <>

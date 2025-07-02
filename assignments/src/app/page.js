@@ -16,6 +16,10 @@ export default function Home() {
     <button onClick={()=>{
       router.push('./Assignment-3');
     }}>Assignment-3</button>
+
+    <button onClick={()=>{
+      router.push('./Assignment-4');
+    }}>Assignment-4</button>
     </>
   );
 }

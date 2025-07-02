@@ -16,6 +16,9 @@ export default function Home(){
         <button onClick={()=>router.push('Assignment-5/Question3')}> Question3 </button>
         <br/>
         <br/>
+        <button onClick={()=>router.push('Assignment-5/Question4')}> Question4 </button>
+        <br/>
+        <br/>
         <button onClick={()=>router.push('Assignment-5/Question5')}> Question5 </button>
         <br/>
         <br/>
